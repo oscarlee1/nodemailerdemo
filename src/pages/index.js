@@ -40,7 +40,7 @@ export default function Home() {
       }, 3000)
       return
     } else {
-      const res = await fetch(`${ process.env.NEXT_PUBLIC_BASE_URL }/api/nodemailer`, {
+      const res = await fetch(`/api/nodemailer`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
