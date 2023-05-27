@@ -40,12 +40,12 @@ export default function Home() {
       }, 3000)
       return
     } else {
-      const res = await fetch(`/api/nodemailer`, {
+      const res = await fetch(`${ process.env.NEXT_PUBLIC_BASE_URL }/api/nodemailer`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ name: name, email: email, subject:subject, message: message })
+        body: JSON.stringify({ name: name, email: email, subject: subject, message: message })
       })
   
       const data = await res.json()
