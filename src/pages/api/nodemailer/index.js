@@ -6,12 +6,6 @@ export default async function handler(req, res) {
 
   switch(method) {
     case "POST":
-      try {
-        res.json({ success: true, data: req.body })
-      } catch(err) {
-        res.json({ success: false, message: err.message })
-      }
-      /*
       const requestBody = JSON.parse(req.body)
 
       const from = process.env.EMAIL
@@ -29,7 +23,6 @@ export default async function handler(req, res) {
       } catch(err) {
         res.json({ success: false, message: err.message })
       }
-      */
       break
     default:
       res.json({ success: false })
