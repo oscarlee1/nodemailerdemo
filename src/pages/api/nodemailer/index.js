@@ -4,13 +4,14 @@ import { transporter } from "../../../lib/nodemailer"
 export default async function handler(req, res) {
   const { method } = req
 
+  /*
   try {
     res.json({ success: true, method: method, body: req.body })
   } catch(err) {
     res.json({ success: false, message: err.message })
   }
+  */
 
-  /*
   switch(method) {
     case "POST":
       const requestBody = JSON.parse(req.body)
@@ -37,5 +38,4 @@ export default async function handler(req, res) {
       res.json({ success: false })
       break
   }
-  */
 }
