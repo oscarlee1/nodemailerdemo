@@ -21,7 +21,7 @@ export default async function handler(req, res) {
 
         res.json({ success: true })
       } catch(err) {
-        res.json({ success: false, message: err.message })
+        res.status(400).json({ success: false, message: err.message })
       }
       break
     default:
